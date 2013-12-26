@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HOME=/home/xaos/gma/start
+
+cd $HOME
+git reset --hard >/dev/null 2>&1
+git pull 2>/dev/null | grep -q "Already up-to-date" || $HOME/upost
