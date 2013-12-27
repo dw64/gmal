@@ -1,3 +1,7 @@
 #!/bin/sh
 
+HOME=/home/xaos/gmal
+
 killall -q -w cgminer
+
+$HOME/notify stopped

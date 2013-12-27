@@ -3,3 +3,5 @@
 HOME=/home/xaos/gmal
 
 pidof cgminer || screen -dmS mine $HOME/mine
+
+$HOME/notify started
