@@ -1,6 +1,6 @@
 GMAL=/home/xaos/gmal
 
-@reboot xaos  $GMAL/start  || :
+@reboot xaos  $GMAL/waitx && $GMAL/start || :
 
  0  0   * * *   xaos   $GMAL/start  || :
 40  7   * * *   xaos   $GMAL/stop   || :

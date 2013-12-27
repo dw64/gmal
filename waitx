@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while ! pidof X >/dev/null
+do 
+    sleep 1
+done
+
+#just in case
+sleep 15
+
