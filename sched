@@ -1,0 +1,6 @@
+#!/bin/bash
+
+HOME=/home/xaos/gmal
+
+cp -f $HOME/cron /etc/cron.d/gmal
+chown root.root /etc/cron.d/gmal

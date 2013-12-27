@@ -1,0 +1,12 @@
+GMAL=/home/xaos/gmal
+
+@reboot xaos  $GMAL/start  || :
+
+ 0  0   * * *   xaos   $GMAL/start  || :
+40  7   * * *   xaos   $GMAL/stop   || :
+ 0  8   * * *   xaos   $GMAL/start  || :
+40 15   * * *   xaos   $GMAL/stop   || :
+ 0 16   * * *   xaos   $GMAL/start  || :
+40 23   * * *   xaos   $GMAL/stop   || :
+
+*/10 *  * * *   root   $GMAL/update || :
