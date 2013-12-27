@@ -4,6 +4,10 @@ export DISPLAY=:0
 export GPU_MAX_ALLOC_PERCENT=100
 export GPU_USE_SYNC_OBJECTS=1
 
+HOME=/home/xaos
+
 cd /home/xaos
-screen -dmS mine ./cgminer -c gma/cgminer.conf
+#screen -dmS mine ./cgminer -c gma/cgminer.conf
+pwd
+./cgminer -c $HOME/gmal/cgminer.conf
  

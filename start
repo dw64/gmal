@@ -1,0 +1,5 @@
+#!/bin/bash
+
+HOME=/home/xaos/gmal
+
+pidof cgminer || screen -dmS mine $HOME/mine
