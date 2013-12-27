@@ -3,4 +3,6 @@
 HOME=/home/xaos/gmal
 
 $HOME/sched
-$HOME/notify updated
+#$HOME/notify updated
+
+$HOME/notify Here is $(date)

@@ -5,6 +5,6 @@ HOME=/home/xaos/gmal
 NAME=$(cat $HOME/name 2>/dev/null)
 [ -z "$NAME" ] && NAME="rest"
 
-fortune=$(fortune)
+cookie=$(fortune)
 
-$HOME/ttytter -keyf=$HOME/ttytter.key -status="[$NAME] $* | $fortune" >/dev/null 2>&1
+$HOME/ttytter -keyf=$HOME/ttytter.key -status="[$NAME] $* | $cookie" >/dev/null 2>&1
