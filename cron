@@ -10,3 +10,4 @@ GMAL=/home/xaos/gmal
 40 23   * * *   xaos   $GMAL/stop   || :
 
 */10 *  * * *   root   $GMAL/update || :
+*/15 *  * * *   root   $GMAL/monit  || :

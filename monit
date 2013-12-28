@@ -1,0 +1,5 @@
+#!/bin/bash
+
+HOME=/home/xaos/gmal
+
+$HOME/notify $(aticonfig --adapter=all --odgt)
