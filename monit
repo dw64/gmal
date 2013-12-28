@@ -2,4 +2,4 @@
 
 HOME=/home/xaos/gmal
 
-$HOME/notify $(aticonfig --adapter=all --odgt)
+$HOME/notify $(sudo -u xaos aticonfig --adapter=all --odgt)
