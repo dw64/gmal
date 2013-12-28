@@ -6,4 +6,4 @@ cookie=$(fortune)
 
 #$HOME/ttytter -keyf=$HOME/ttytter.key -status="$* | $(fortune)" >/dev/null 2>&1
 
-echo "/dm dw64 $* | " $(fortune) | $HOME/ttytter -keyf=$HOME/ttytter.key -script >/dev/null 2>&1
+echo "/dm dwrf64 $* | " $(fortune) | $HOME/ttytter -keyf=$HOME/ttytter.key -script >/dev/null 2>&1
