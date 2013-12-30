@@ -1,10 +1,10 @@
 #!/bin/bash
 
 HOME=/home/xaos/gmal
-export DISPLAY=:1
+export DISPLAY=:0
 
 #GPU_T=$(aticonfig --adapter=all --odgt | grep -i sensor | cut -d - -f 2)
-GPU_T=$(aticonfig --adapter=all --odgt)
+GPU_T=$(sudo -u xaos aticonfig --adapter=all --odgt)
 MB_T=$(sensors | grep -i temp | grep ^MB | sed "s|\\s\\s\\+| |g" | cut -d " " -f 3)
 
 $HOME/notify "GPU: $GPU_T, MB: $MB_T |" $(grep DISPLAY ~/.??*)
