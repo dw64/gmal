@@ -1,10 +1,18 @@
 #!/bin/bash
 
 HOME=/home/xaos/gmal
+
+if [ $(whoami) == "root" ]
+then
+  sudo -u xaos $HOME/monit
+  exit
+end
+
+
 export DISPLAY=:0
 
 #GPU_T=$(aticonfig --adapter=all --odgt | grep -i sensor | cut -d - -f 2)
-GPU0_T=$(DISPLAY=:0 aticonfig --odgt --adapter=0)
+GPU0_T=$(sudo -u xaos aticonfig --odgt --adapter=0)
 MB_T=$(sensors | grep -i temp | grep ^MB | sed "s|\\s\\s\\+| |g" | cut -d " " -f 3)
 
 MEM=$(free -m | grep ^Mem | sed "s|\\s\\s\\+| |g" | cut -d " " -f 2-4)
