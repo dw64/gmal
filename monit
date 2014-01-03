@@ -7,6 +7,6 @@ export DISPLAY=:0
 GPU0_T=$(aticonfig --odgt --adapter=0)
 MB_T=$(sensors | grep -i temp | grep ^MB | sed "s|\\s\\s\\+| |g" | cut -d " " -f 3)
 
-MEM=$(free)
+MEM=$(free -m | grep ^Mem | sed "s|\\s\\s\\+| |g" | cut -d " " -f 1-4)
 
 $HOME/notify "GPU: $GPU0_T, MB: $MB_T, MEM: $MEM"
