@@ -11,8 +11,8 @@ fi
 
 export DISPLAY=:0
 
-#GPU_T=$(aticonfig --adapter=all --odgt | grep -i sensor | cut -d - -f 2)
-GPU0_T=$(aticonfig --odgt --adapter=0)
+GPU0_T=$(aticonfig --odgt --adapter=0 | grep -i sensor | cut -d - -f 2)
+#GPU0_T=$(aticonfig --odgt --adapter=0)
 MB_T=$(sensors | grep -i temp | grep ^MB | sed "s|\\s\\s\\+| |g" | cut -d " " -f 3)
 
 MEM=$(free -m | grep ^Mem | sed "s|\\s\\s\\+| |g" | cut -d " " -f 2-4)
