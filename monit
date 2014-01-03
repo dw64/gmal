@@ -4,9 +4,9 @@ HOME=/home/xaos/gmal
 export DISPLAY=:0
 
 #GPU_T=$(aticonfig --adapter=all --odgt | grep -i sensor | cut -d - -f 2)
-GPU0_T=$(aticonfig --odgt --adapter=0)
+GPU0_T=$(DISPLAY=:0 aticonfig --odgt --adapter=0)
 MB_T=$(sensors | grep -i temp | grep ^MB | sed "s|\\s\\s\\+| |g" | cut -d " " -f 3)
 
-MEM=$(free -m | grep ^Mem | sed "s|\\s\\s\\+| |g" | cut -d " " -f 1-4)
+MEM=$(free -m | grep ^Mem | sed "s|\\s\\s\\+| |g" | cut -d " " -f 2-4)
 
-$HOME/notify "GPU: $GPU0_T, MB: $MB_T, MEM: $MEM"
+$HOME/notify "GPU: $GPU0_T, MB: $MB_T, Mem: $MEM"
