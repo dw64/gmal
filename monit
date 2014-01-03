@@ -6,7 +6,7 @@ if [ $(whoami) == "root" ]
 then
   sudo -u xaos $HOME/monit
   exit
-end
+fi
 
 
 export DISPLAY=:0
