@@ -4,4 +4,4 @@ HOME=/home/xaos/gmal
 
 sleep $[ $RANDOM % 30 ]
 
-echo "/dm dwrf64 " $(date +%H:%M) "$*" | $HOME/ttytter -keyf=$HOME/ttytter.key -script >/dev/null 2>&1
+echo "/dm dwrf64 " $(date +%H:%M) "- $*" | $HOME/ttytter -keyf=$HOME/ttytter.key -script >/dev/null 2>&1
